@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Images/V_logo.png" type="image/gif" sizes="16x16">
+    <title>Department of Civil Engineering</title>
+    <style>
+        :root {
+            --primary: #00695C;
+            --secondary: #004D40;
+            --accent: #FF8F00;
+            --light: #E0F2F1;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: var(--light);
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            padding: 1rem 0;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .college-info {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .college-logo {
+            width: 100px;
+            filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.3));
+        }
+
+        .college-title {
+            color: white;
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .moto {
+            font-style: italic;
+            color: rgba(255,255,255,0.9);
+            margin-top: 0.5rem;
+        }
+
+        .home-link {
+            background: var(--accent);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .home-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,166,81,0.3);
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0,105,92,0.9), rgba(0,105,92,0.9)), url('Images/civil-lab.jpg') center/cover;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+            margin-bottom: 1rem;
+        }
+
+        section {
+            padding: 4rem 10%;
+            background: white;
+            margin: 2rem 10%;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            color: var(--primary);
+            margin-bottom: 2rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--accent);
+        }
+
+        .facility-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .facility-card {
+            padding: 1.5rem;
+            border-left: 4px solid var(--accent);
+            background: var(--light);
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        .facility-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .faculty-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .faculty-card {
+            background: var(--light);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            padding: 1rem;
+            transition: 0.3s ease-in-out;
+        }
+
+        .faculty-card:hover {
+            background-color: #b5e017;
+            color: #a80810;
+            transform: translateY(-5px);
+        }
+
+        .faculty-info {
+            text-align: center;
+        }
+
+        .highlight {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        footer {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+
+            section {
+                margin: 2rem 5%;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .faculty-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .faculty-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="college-info">
+                <a href="index.html">
+                    <img src="Images/V_logo.png" class="college-logo" alt="College Logo">
+                </a>
+                <div>
+                    <h1 class="college-title">Vishwabharati Academy's College of Engineering</h1>
+                    <p class="moto">"Prepare young Engineers to shoulder the responsibility of leading mother India to glory."</p>
+                </div>
+            </div>
+            <a href="index.html" class="home-link">Home</a>
+        </div>
+    </header>
+
+    <div class="hero">
+        <div>
+            <h1>Department of Civil Engineering</h1>
+            <p>Building Sustainable Infrastructure</p>
+        </div>
+    </div>
+
+    <section>
+        <h2>About the Department</h2>
+        <p>The <span class="highlight">Department of Civil Engineering</span> combines traditional engineering principles with modern sustainable construction techniques, focusing on smart city development and environmental conservation.</p>
+    </section>
+
+    <section>
+        <h2>Academic Programs</h2>
+        <div class="facility-grid">
+            <div class="facility-card">
+                <h3><i class="fas fa-bridge"></i> B.E. Civil Engineering</h3>
+                <p>4-year program covering structural design, transportation systems, and environmental engineering</p>
+            </div>
+            <div class="facility-card">
+                <h3><i class="fas fa-water"></i> M.E. Environmental Engineering</h3>
+                <p>Advanced studies in water resource management and sustainable development</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Facilities</h2>
+        <div class="facility-grid">
+            <div class="facility-card">
+                <h3><i class="fas fa-hard-hat"></i> Structural Engineering Lab</h3>
+                <ul>
+                    <li>2000 kN Universal Testing Machine</li>
+                    <li>Concrete mix design equipment</li>
+                    <li>Non-destructive testing tools</li>
+                </ul>
+            </div>
+            <div class="facility-card">
+                <h3><i class="fas fa-drafting-compass"></i> Surveying Equipment</h3>
+                <ul>
+                    <li>Total stations</li>
+                    <li>GPS systems</li>
+                    <li>Drone mapping technology</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Faculty</h2>
+        <div class="faculty-grid">
+            <div class="faculty-card">
+                <div class="faculty-info">
+                    <h3>Mr Niteen S. Deshpande (HOD)</h3>
+                    <p>M.E. (Structural Engg.)</p>
+                    <p>15 Years Experience</p>
+                    <p>deshpandeniteen15@gmail.com</p>
+                </div>
+            </div>
+            <div class="faculty-card">
+                <div class="faculty-info">
+                    <h3>Mr. Khalil Siraj Ahmed Shaikh</h3>
+                    <p>M.E. (Structural Engg.)</p>
+                    <p>11 Years Experience</p>
+                    <p>shaikhkhalils@gmail.com</p>
+                </div>
+            </div>
+            <div class="faculty-card">
+                <div class="faculty-info">
+                    <h3>Mr Rahul G. Bramhane</h3>
+                    <p>M.E. (Structural Engg.)</p>
+                    <p>5.6 Years Experience</p>
+                    <p>rgbvacoe@gmail.com</p>
+                </div>
+            </div>
+            <div class="faculty-card">
+                <div class="faculty-info">
+                    <h3>Prof. Borhade Siddhi Arun</h3>
+                    <p>M.E. (Structural Engg.)</p>
+                    <p>4 Years Experience</p>
+                    <p>siddhi.vacoe@gmail.com</p>
+                </div>
+            </div>
+            <div class="faculty-card">
+                <div class="faculty-info">
+                    <h3>Mr Walmik N. Bhalsing</h3>
+                    <p>ME (Structural Engineer)</p>
+                    <p>walmikb277@gmail.com</p>
+                </div>
+            </div>
+            <div class="faculty-card">
+                <div class="faculty-info">
+                    <h3>Miss. Kapate Radhika Bappasaheb</h3>
+                    <p>ME (Structural Engineer)</p>
+                    <p>8 Years Experience</p>
+                    <p>rbkvacoe@gmail.com</p>
+                </div>
+            </div>
+            <div class="faculty-card">
+                <div class="faculty-info">
+                    <h3>Mr Deepamkar C. Gatane</h3>
+                    <p>M.Tech (Town & Country Planning)</p>
+                    <p>8 Years Experience</p>
+                    <p>dcg.vacoe@gmail.com</p>
+                </div>
+            </div>
+            <div class="faculty-card">
+                <div class="faculty-info">
+                    <h3>Prof. Choudhari Kalyani Shashikant</h3>
+                    <p>M.Tech (ML)</p>
+                    <p>9 Years Experience</p>
+                    <p>ksc.vacoe@gmail.com</p>
+                </div>
+            </div>
+            <div class="faculty-card">
+                <div class="faculty-info">
+                    <h3>Miss. Pawar Dhanashri Bhimraj</h3>
+                    <p>ME (Structure)</p>
+                    <p>9 Years Experience</p>
+                    <p>dbpvacoe@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Vishwabharati Academy's College of Engineering. All rights reserved.</p>
+        <p>Contact: <a href="mailto:principal_vacoea@yahoo.com" style="color: var(--accent);">principal_vacoea@yahoo.com</a> | +91 7030900709</p>
+    </footer>
+</body>
+</html>

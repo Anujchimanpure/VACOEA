@@ -1,0 +1,201 @@
+/*  Navigation Bar */
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+  padding: 0 5%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.topnav nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.topnav nav ul li {
+  margin: 0;
+}
+
+.topnav nav ul li a {
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 16px 20px;
+  display: block;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.topnav nav ul li a:hover {
+  background-color: #fff;
+  color: black;
+  border-radius: 5px;
+}
+
+.topnav nav ul li a.active {
+  background-color: #ec886f;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.marquee-text {
+  overflow: hidden; 
+  position: relative;
+}
+
+.marquee-text a {
+  font-weight: bold;
+  white-space: nowrap;  
+  display: inline-block;
+  padding-left: 100%;  
+  animation: scroll-left 10s linear infinite;  
+}
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(100%); 
+  }
+  to {
+    transform: translateX(-100%); 
+  }
+}
+/* Highlight 'now!' */
+.highlight {
+  background-color: #fcff01;
+  color: red;
+  font-family: Verdana, sans-serif;
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
+
+@media (max-width: 768px) {
+  .topnav nav ul {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .topnav nav ul li {
+    width: 100%;
+  }
+
+  .topnav nav ul li a {
+    padding: 14px;
+  }
+}
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+  
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+.banner {
+  background-image: url('school.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.inquiry-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #c2a0ec;
+  color: white;
+  padding: 15px 25px;
+  font-size: 18px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  animation: pulse 2s infinite; 
+}
+
+.inquiry-btn:hover {
+  background-color: #ff0000fc;
+  transform: scale(1.1);
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.elfsight-app-c8568a67-2af1-4798-9761-1041963b58d5 {
+  position: fixed;
+  bottom: 80px;  
+  right: 20px;  
+  z-index: 9999; 
+}
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+        text-shadow: none;
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        text-shadow: 5px 5px 15px rgba(162, 164, 227, 0.8); 
+    }
+}
+
+.animated-text {
+    opacity: 0; 
+    animation: fadeInUp 1.5s ease-out forwards; 
+    font-size: 400%;
+    font-weight: bold;
+    color: rgb(1, 16, 28);
+    text-shadow: 3px 3px 10px rgba(151, 153, 222, 0.6); 
+}
+
+.hero-section {
+  position: relative;
+  height: 500px;
+  background-image: url('Images/BG1.png'); /* Default image for desktop */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 📱 Change Background Image for Mobile Screens */
+@media (max-width: 768px) {
+  .hero-section {
+      background-image: url('Images/Mobile_bg2.jpg'); /* Mobile-friendly image */
+  }
+}
+
+
+
+
+

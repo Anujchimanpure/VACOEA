@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Images/V_logo.png" type="image/gif" sizes="16x16">
+    <title>Contact Us - VACOEA</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <style>
+        /* General Page Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('Images/Contact.JPG') no-repeat center center/cover;
+
+            color: white;
+            text-align: center;
+        }
+
+        /* Header with Clickable Logo */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* College Logo */
+        header a img {
+            width: 100px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        /* Hover Effect on Logo */
+        header a img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Centering the "Contact Us" Title */
+        header h1 {
+            flex: 1;
+            text-align: center;
+            margin: 0;
+            font-size: 28px;
+        }
+
+        /* Main Contact Box */
+        main {
+            padding: 20px;
+            max-width: 900px;
+            margin: 30px auto;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 12px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        h2 {
+            color: #FFD700;
+        }
+
+        /* Contact Section Styling */
+        .contact-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .contact-box {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 12px;
+            min-width: 250px;
+            text-align: center;
+            transition: transform 0.3s, background 0.3s;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+        }
+
+        .contact-box:hover {
+            transform: scale(1.05);
+            background: rgba(255, 165, 0, 0.9);
+            color: white;
+        }
+
+        a {
+            color: #FFD700;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Map Box */
+        .map-box {
+            background: rgba(80, 78, 78, 0.8);
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        iframe {
+            width: 100%;
+            height: 350px;
+            border-radius: 12px;
+            margin-top: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Gallery Styling */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .gallery img {
+            width: 500px;
+            height: 150px;
+            border-radius: 20px;
+            border: 3px solid #FFD700;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+        
+        /* Back to Home Link */
+        .back-home {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #FFD700;
+            color: black;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s ease-in-out;
+        }
+
+        .back-home:hover {
+            background: #FFA500;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header style="width: 100%; background-color: rgba(0, 0, 0, 0.05); padding: 10px 0;">
+        <div style="display: flex; align-items: center; justify-content: space-between; padding: 0 5%;">
+            
+
+            <div style="display: flex; align-items: center;">
+              <a href="index.html" title="Go to Home">
+                <img src="Images/V_logo.png" width="100px" style="margin-right: 15px;">
+            </a>
+                <div>
+                    <h1 style="
+                        font-size: 24px;
+                        color: #3c3f8c;
+                        font-weight: bold;
+                        margin: 0;
+                        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+                    ">
+                        Vishwabharati Academy's College of Engineering Ahilyanagar
+                    </h1>
+                    <p style="
+                        font-size: 14px;
+                        color: #010618;
+                        font-weight: bold;
+                        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+                        background-color: rgba(0, 0, 0, 0.1);
+                        display: inline-block;
+                        padding: 3px 8px;
+                        border-radius: 5px;
+                        margin-top: 5px;
+                    ">
+                        "Prepare young Engineers to shoulder the responsibility of leading mother India to glory."
+                    </p>
+                </div>
+            </div>
+    
+
+        </div>
+
+          </header>
+        <p style ="font-size: 40px; font-weight: bold; color: #010618; " ></style>📞 Contact Us</p>
+    </header>
+    
+    <!-- Main Contact Section -->
+    <main>
+        <div class="contact-section">
+            <div class="contact-box">
+                <h2>📸 Social Media</h2>
+                <p><a href="https://www.instagram.com/vacoepa?igsh=Z3F2MGRzaHlsdnJj" target="_blank">Instagram</a></p>
+                <p><a href="https://www.facebook.com/VishwabharatiCOEAhmednagar/" target="_blank">Facebook</a></p>
+            </div>
+            <div class="contact-box">
+                <h2>📧 Email</h2>
+                <p>📩 principal_vacoea@yahoo.com</p>
+                <p>📩 admissioncell.vacoea@gmail.com</p>
+                <p>📩 examdegree.vacoea@gmail.com</p>
+            </div>
+            <div class="contact-box">
+                <h2>📞 Phone</h2>
+                <p>📲 7030900709</p>
+                <p>📲 7030900706</p>
+                <p>📲 7030900703</p>
+            </div>
+            <div class="contact-box">
+                <h2>📍 Address</h2>
+                <p>Sarola Baddi, Jamkhed Road, 1, MH MSH 2, Maharashtra 414201</p>
+            </div>
+        </div>
+        
+        <!-- Google Maps Section -->
+        <div class="map-box">
+            <h2>📍 Our Location</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.091021792556!2d74.80779837496704!3d19.094728151409104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc42d1fa1be1fa7%3A0xa464ec3d8c80f2bd!2sVishwabharati%20College%20of%20Engineering%2C%20Sarola%20Baddi%2C%20Jamkhed%20Road%2C%20Maharashtra%20414201!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        
+        <!-- College Image Gallery -->
+        <div class="gallery">
+            <img src="Images/contact1.png" alt="College Image 1">
+        </div>
+        
+        <!-- Back to Home Button -->
+        <p><a href="index.html" class="back-home">⬅ Back to Home</a></p>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="Images/V_logo.png" type="image/gif" sizes="16x16" />
+  <title>Department of Computer Engineering</title>
+  <style>
+    :root {
+      --primary: #3c3f8c;
+      --secondary: #2E3192;
+      --accent: #00A651;
+      --light: #f8f9fa;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      background-color: var(--light);
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      padding: 1rem 0;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .college-info {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .college-logo {
+      width: 100px;
+      filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.3));
+    }
+
+    .college-title {
+      color: white;
+      margin: 0;
+      font-size: 1.5rem;
+    }
+
+    .moto {
+      font-style: italic;
+      color: rgba(255,255,255,0.9);
+      margin-top: 0.5rem;
+    }
+
+    .home-link {
+      background: var(--accent);
+      color: white;
+      padding: 0.8rem 1.5rem;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    .home-link:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0,166,81,0.3);
+    }
+
+    .hero {
+      background: linear-gradient(rgba(60,63,140,0.9), rgba(60,63,140,0.9)), url('Images/lab-bg.jpg') center/cover;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3rem);
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+      margin-bottom: 1rem;
+    }
+
+    section {
+      padding: 4rem 10%;
+      background: white;
+      margin: 2rem 10%;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    }
+
+    h2 {
+      color: var(--primary);
+      margin-bottom: 2rem;
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: var(--accent);
+    }
+
+    .facility-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .facility-card {
+      padding: 1.5rem;
+      border-left: 4px solid var(--accent);
+      background: var(--light);
+      border-radius: 8px;
+      transition: transform 0.3s;
+    }
+
+    .facility-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .faculty-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* Force exactly 3 columns per row */
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .faculty-card {
+      background-color: #f9f9f9;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .faculty-card:hover {
+      transform: translateY(-5px) scale(1.02);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      background-color: #eef6ff;
+    }
+
+    .faculty-info h3 {
+      margin: 0 0 8px;
+      color: #1a237e;
+      transition: color 0.3s ease;
+    }
+
+    .faculty-card:hover h3 {
+      color: #0d47a1;
+    }
+
+    .faculty-info p {
+      margin: 4px 0;
+      color: #333;
+      font-size: 14px;
+    }
+
+    .highlight {
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    footer {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      margin-top: 4rem;
+    }
+
+    footer a {
+      color: var(--accent);
+    }
+
+    @media (max-width: 768px) {
+      .header-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+      }
+
+      section {
+        margin: 2rem 5%;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .faculty-grid {
+        grid-template-columns: repeat(1, 1fr); /* Stack on small screens */
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+<body>
+  <header>
+    <div class="header-content">
+      <div class="college-info">
+        <a href="index.html">
+          <img src="Images/V_logo.png" class="college-logo" alt="College Logo" />
+        </a>
+        <div>
+          <h1 class="college-title">Vishwabharati Academy's College of Engineering</h1>
+          <p class="moto">"Prepare young Engineers to shoulder the responsibility of leading mother India to glory."</p>
+        </div>
+      </div>
+      <a href="index.html" class="home-link">Home</a>
+    </div>
+  </header>
+
+  <div class="hero">
+    <div>
+      <h1>Department of Computer Engineering</h1>
+      <p>Shaping the Future of Technology</p>
+    </div>
+  </div>
+
+  <section>
+    <h2>About the Department</h2>
+    <p>The <span class="highlight">Department of Computer Engineering</span> at Vishwabharati Academy is dedicated to shaping future leaders in technology. With a focus on cutting-edge innovations, we prepare students for the dynamic world of software development, AI, and emerging technologies.</p>
+  </section>
+
+  <section>
+    <h2>Academic Programs</h2>
+    <div class="facility-grid">
+      <div class="facility-card">
+        <h3><i class="fas fa-graduation-cap"></i> B.E. in Computer Engineering</h3>
+        <p>A comprehensive four-year undergraduate program covering programming, algorithms, data structures, and software engineering.</p>
+      </div>
+      <div class="facility-card">
+        <h3><i class="fas fa-magic"></i> M.E. in Computer Engineering</h3>
+        <p>Two-year postgraduate program focusing on research in machine learning, cybersecurity, and IoT.</p>
+      </div>
+      <div class="facility-card">
+        <h3><i class="fas fa-certificate"></i> Diploma Program</h3>
+        <p>Three-year foundational program introducing core computing concepts.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Why Choose Us?</h2>
+    <div class="facility-grid">
+      <div class="facility-card">
+        <h3><i class="fas fa-industry"></i> Industry Collaboration</h3>
+        <p>Curriculum designed with top IT companies</p>
+      </div>
+      <div class="facility-card">
+        <h3><i class="fas fa-laptop-code"></i> Hands-on Learning</h3>
+        <p>Regular hackathons and workshops</p>
+      </div>
+      <div class="facility-card">
+        <h3><i class="fas fa-briefcase"></i> Placement Support</h3>
+        <p>Strong track record with MNCs & startups</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Faculty</h2>
+    <div class="faculty-grid">
+      <div class="faculty-card">
+        <div class="faculty-info">
+          <h3>Mrs. Snehalata Chandrashekhara Puranik (HOD)</h3>
+          <p>M.Tech</p>
+          <p>11 Years Experience</p>
+          <p>snehalata243@gmail.com</p>
+        </div>
+      </div>
+      <div class="faculty-card">
+        <div class="faculty-info">
+          <h3>Prof. Joshi Sarika Ganesh</h3>
+          <p>Academic Dean</p>
+          <p>M.E. (Communication)</p>
+          <p>21 Years Experience</p>
+          <p>sareeka.anr07@gmail.com</p>
+        </div>
+      </div>
+      <div class="faculty-card">
+        <div class="faculty-info">
+          <h3>Prof. Muley Komal Arunrao</h3>
+          <p>Assistant Professor</p>
+          <p>ME Computer Science (Pursuing)</p>
+          <p>1 Year Experience</p>
+          <p>komalmuley28@gmail.com</p>
+        </div>
+      </div>
+      <div class="faculty-card">
+        <div class="faculty-info">
+          <h3>Prof. Gunjal Harshal Dnyaneshwar</h3>
+          <p>Assistant Professor</p>
+          <p>ME (Computer) (Pursuing)</p>
+          <p>1 Year Experience</p>
+          <p>gunjala09@gmail.com</p>
+        </div>
+      </div>
+      <div class="faculty-card">
+        <div class="faculty-info">
+          <h3>Prof. Tathe Sachin Gangadhar</h3>
+          <p>Assistant Professor</p>
+          <p>ME (Computer)</p>
+          <p>14 Years Experience</p>
+          <p>sachin.tathe@gmail.com</p>
+        </div>
+      </div>
+      <div class="faculty-card">
+        <div class="faculty-info">
+          <h3>Mr. Bhagwat Ravindra Arun</h3>
+          <p>Assistant Professor</p>
+          <p>MBA (IT), SET, PhD Appeared</p>
+          <p>7 Years Experience</p>
+          <p>bhagwatravi70@rediffmail.com</p>
+        </div>
+      </div>
+      <div class="faculty-card">
+        <div class="faculty-info">
+          <h3>Mr. Tulshiram Gawade</h3>
+          <p>System Analyst</p>
+          <p>MCM</p>
+          <p>14 Years Experience</p>
+          <p>tulshiramgawade@gmail.com</p>
+        </div>
+      </div>
+      <div class="faculty-card">
+        <div class="faculty-info">
+          <h3>Miss. Salunke Mansi Dnyandeo</h3>
+          <p>Assistant Professor</p>
+          <p>BCA</p>
+          <p>2 Years Experience</p>
+          <p>mansisalunke19@gmail.com</p>
+        </div>
+      </div>
+      <div class="faculty-card">
+        <div class="faculty-info">
+          <h3>Mrs. Dole Seema Vishnu</h3>
+          <p>Assistant Professor</p>
+          <p>MBA (IT)</p>
+          <p>2 Years Experience</p>
+          <p>seemadole01@gmail.com</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Vishwabharati Academy's College of Engineering. All rights reserved.</p>
+    <address>
+      Contact: <a href="mailto:principal_vacoea@yahoo.com">principal_vacoea@yahoo.com</a> | +91 7030900709
+    </address>
+  </footer>
+</body>
+</html>

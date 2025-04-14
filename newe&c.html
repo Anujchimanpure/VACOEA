@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Images/V_logo.png" type="image/gif" sizes="16x16">
+    <title>Department of Electronics Engineering</title>
+    <style>
+        :root {
+            --primary: #6A1B9A;
+            --secondary: #4A148C;
+            --accent: #00B0FF;
+            --light: #F3E5F5;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            background-color: var(--light);
+            color: #333;
+        }
+
+        /* Enhanced Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            padding: 1rem 0;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .college-info {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .college-logo {
+            width: 100px;
+            filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.3));
+        }
+
+        .college-title {
+            color: white;
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        .moto {
+            font-style: italic;
+            color: rgba(255,255,255,0.9);
+            margin-top: 0.5rem;
+        }
+
+        .home-link {
+            background: var(--accent);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .home-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,166,81,0.3);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(60,63,140,0.9), rgba(60,63,140,0.9)),
+                        url('Images/electronics-lab.jpg') center/cover;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+            margin-bottom: 1rem;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 4rem 10%;
+            background: white;
+            margin: 2rem 10%;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            color: var(--primary);
+            margin-bottom: 2rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--accent);
+        }
+
+        /* Facilities Grid */
+        .facility-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .facility-card {
+            padding: 1.5rem;
+            border-left: 4px solid var(--accent);
+            background: var(--light);
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+
+        .facility-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Faculty Grid */
+        .faculty-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .faculty-card {
+            background: var(--light);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .faculty-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-bottom: 3px solid var(--accent);
+        }
+
+        .faculty-info {
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .highlight {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        footer {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+
+            section {
+                margin: 2rem 5%;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="college-info">
+                <a href="index.html">
+                    <img src="/Images/V_logo.png" class="college-logo" alt="College Logo">
+                </a>
+                <div>
+                    <h1 class="college-title">Vishwabharati Academy's College of Engineering</h1>
+                    <p class="moto">"Prepare young Engineers to shoulder the responsibility of leading mother India to glory."</p>
+                </div>
+            </div>
+            <a href="index.html" class="home-link">Home</a>
+        </div>
+    </header>
+
+    <div class="hero" style="background: linear-gradient(rgba(106,27,154,0.9), rgba(106,27,154,0.9)), url('Images/electronics-lab.jpg');">
+        <div>
+            <h1>Department of Electronics & Computer Engineering</h1>
+            <p>Innovating Smart Systems</p>
+        </div>
+    </div>
+
+    <section>
+        <h2>About the Department</h2>
+        <p>The <span class="highlight">Department of Electronics Engineering</span> emphasizes IoT, embedded systems, and VLSI design, preparing students for semiconductor industry challenges.</p>
+    </section>
+
+    <section>
+        <h2>Academic Programs</h2>
+        <div class="facility-grid">
+            <div class="facility-card">
+                <h3><i class="fas fa-microchip"></i> B.E. Electronics Engineering</h3>
+                <p>4-year program with embedded systems specialization</p>
+            </div>
+            <div class="facility-card">
+                <h3><i class="fas fa-satellite"></i> M.E. Communication Systems</h3>
+                <p>Advanced studies in 5G and satellite communication</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Facilities</h2>
+        <div class="facility-grid">
+            <div class="facility-card">
+                <h3><i class="fas fa-pcb"></i> VLSI Design Lab</h3>
+                <ul>
+                    <li>Cadence EDA tools</li>
+                    <li>FPGA development kits</li>
+                    <li>IC testing equipment</li>
+                </ul>
+            </div>
+            <div class="facility-card">
+                <h3><i class="fas fa-broadcast-tower"></i> IoT Innovation Lab</h3>
+                <ul>
+                    <li>Smart sensor networks</li>
+                    <li>LoRaWAN development</li>
+                    <li>Industrial IoT setups</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Faculty</h2>
+        <div class="faculty-grid">
+          <div class="faculty-card">
+            <div class="faculty-info">
+              <h3>Mrs. Snehalata Chandrashekhara Puranik (HOD)</h3>
+              <p>M.Tech</p>
+              <p>11 Years Experience</p>
+              <p>snehalata243@gmail.com</p>
+            </div>
+          </div>
+          <div class="faculty-card">
+            <div class="faculty-info">
+              <h3>Mr. Parvez L. Shaikh</h3>
+              <p>Assistant Professor</p>
+              <p>ME Computer (Pursuing)</p>
+              <p>3 Years Experience</p>
+              <p>Connect.etcparvez@gmail.com</p>
+            </div>
+          </div>
+          <div class="faculty-card">
+            <div class="faculty-info">
+              <h3>Mrs. Priyanka Abhishek Udare</h3>
+              <p>Assistant Professor</p>
+              <p>M.E. Computer (Pursuing)</p>
+              <p>5 Years Experience</p>
+              <p>priyankaudare46@gmail.com</p>
+            </div>
+          </div>
+          <div class="faculty-card">
+            <div class="faculty-info">
+              <h3>Mr. Ganesh Gitaram Khemnar</h3>
+              <p>Assistant Professor</p>
+              <p>M.Tech</p>
+              <p>10 Years Experience</p>
+              <p>ganeshkhemnar@gmail.com</p>
+            </div>
+          </div>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Vishwabharati Academy's College of Engineering. All rights reserved.</p>
+        <address>
+          Contact: <a href="mailto:principal_vacoea@yahoo.com">principal_vacoea@yahoo.com</a> | +91 7030900709
+        </address>
+    </footer>
+</body>
+</html>
